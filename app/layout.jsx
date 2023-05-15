@@ -11,10 +11,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="flex bg-[#111010]">
-        <header className="w-[15%] fixed left-14 h-screen">
-          <div className="bg-yellow-200 w-full h-full flex flex-col justify-center items-center">
-            <h1>teste</h1>
+      <body className="flex bg-[#111010] justify-center items-center gap-x-10">
+        <header className="w-[15%] h-screen">
+          <div className="w-full h-full flex flex-col justify-center items-center">
+            <div className="w-full lg:h-[85%] md:h-[65%]">
+              <div className="w-full h-[20%] flex justify-center items-center border border-blue-600"><img src="" alt="" />IMG de TESTE</div>
+              <div className="h-[75%] w-full flex flex-col mt-10 items-center gap-y-5">
+                <button className="lg:w-[70%] md:w-[80%] py-2 rounded-md bg-slate-300">Sobre</button>
+                <button className="lg:w-[70%] md:w-[80%] py-2 rounded-md bg-slate-300">Experiência</button>
+                <button className="lg:w-[70%] md:w-[80%] py-2 rounded-md bg-slate-300">Formação</button>
+                <button className="lg:w-[70%] md:w-[80%] py-2 rounded-md bg-slate-300">Projetos</button>
+                <button className="lg:w-[70%] md:w-[80%] py-2 rounded-md bg-slate-300">Blog</button>
+              </div>
+            </div>
           </div>
         </header>
         {children}
