@@ -11,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="flex flex-col w-screen h-screen lg:flex-row md:flex-row bg-[#242222]">
+      <body className="flex flex-col w-screen h-screen lg:flex-row md:flex-row bg-[#111010]">
         <header className="w-full lg:w-[30%] md:w-[30%] h-[30%] lg:h-screen md:h-screen">
           <ul className="lg:mt-5 md:mt-5 lg:float-right md:float-right">
             <li>
