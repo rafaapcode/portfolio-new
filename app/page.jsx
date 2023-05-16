@@ -25,6 +25,9 @@ export default function Home() {
             </ul>
         </div>
       </div>
+      <div className="md:px-10 lg:px-10 mt-5 mb-5 w-full">
+      <p>Skills</p>
+      </div>
       <div className="md:px-10 lg:mt-5 md:mt-5 text-[#666565]">
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde sint
