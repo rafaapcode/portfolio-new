@@ -1,7 +1,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = {
   title: "Create Next App",
@@ -11,20 +11,33 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="flex bg-[#111010] justify-center items-center gap-x-10">
-        <header className="w-[15%] h-screen">
-          <div className="w-full h-full flex flex-col justify-center items-center">
-            <div className="w-full lg:h-[85%] md:h-[65%]">
-              <div className="w-full h-[20%] flex justify-center items-center border border-blue-600"><img src="" alt="" />IMG de TESTE</div>
-              <div className="h-[75%] w-full flex flex-col mt-10 items-center gap-y-5">
-                <button className="lg:w-[70%] md:w-[80%] py-2 rounded-md bg-slate-300">Sobre</button>
-                <button className="lg:w-[70%] md:w-[80%] py-2 rounded-md bg-slate-300">Experiência</button>
-                <button className="lg:w-[70%] md:w-[80%] py-2 rounded-md bg-slate-300">Formação</button>
-                <button className="lg:w-[70%] md:w-[80%] py-2 rounded-md bg-slate-300">Projetos</button>
-                <button className="lg:w-[70%] md:w-[80%] py-2 rounded-md bg-slate-300">Blog</button>
-              </div>
+      <body className="flex flex-col w-screen h-screen lg:flex-row md:flex-row bg-[#242222]">
+        <header className="w-full lg:w-[30%] md:w-[30%] h-[30%] lg:h-screen md:h-screen">
+          <ul className="lg:mt-5 md:mt-5 lg:float-right md:float-right">
+            <li>
+              <Image src="/images/logo.svg" width={100} height={100} />
+            </li>
+            <div className="flex flex-row md:flex-col lg:flex-col flex-wrap ml-2 md:ml-0 lg:ml-0 gap-x-5 gap-y-2 lg:gap-x-0 md:gap-x-0 lg:gap-y-0 md:gap-y-0">
+              <li className="w-fit h-fit px-2 py-1 rounded-md text-[#5f5d5d] hover:text-[#fff]">
+                <Link href="/">Home</Link>
+              </li>
+              <li className="w-fit h-fit lg:mt-2 md:mt-2 px-2 py-1 rounded-md text-[#5f5d5d] hover:text-[#fff]">
+                <Link href="/about">Sobre</Link>
+              </li>
+              <li className="w-fit h-fit lg:mt-2 md:mt-2 px-2 py-1 rounded-md text-[#5f5d5d] hover:text-[#fff]">
+                <Link href="/qualification">Formação</Link>
+              </li>
+              <li className="w-fit h-fit lg:mt-2 md:mt-2 px-2 py-1 rounded-md text-[#5f5d5d] hover:text-[#fff]">
+                <Link href="/experience">Experiência</Link>
+              </li>
+              <li className="w-fit h-fit lg:mt-2 md:mt-2 px-2 py-1 rounded-md text-[#5f5d5d] hover:text-[#fff]">
+                <Link href="/projects">Projetos</Link>
+              </li>
+              <li className="w-fit h-fit lg:mt-2 md:mt-2 px-2 py-1 rounded-md text-[#5f5d5d] hover:text-[#fff]">
+                <Link href="/blog">Blog</Link>
+              </li>
             </div>
-          </div>
+          </ul>
         </header>
         {children}
       </body>
