@@ -1,7 +1,10 @@
+"use client";
+
 import "./globals.css";
-import { Inter } from "next/font/google";
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
+import { motion } from "framer-motion";
 
 export const metadata = {
   title: "Create Next App",
@@ -9,33 +12,55 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const [active, setActive] = useState("");
+
+  const menus = [];
+
   return (
     <html lang="en">
       <body className="flex flex-col w-screen h-screen lg:flex-row md:flex-row bg-[#111010]">
         <header className="w-full lg:w-[30%] md:w-[30%] h-[30%] lg:h-screen md:h-screen">
           <ul className="lg:mt-5 md:mt-5 lg:float-right md:float-right">
-            <li>
+            <motion.li initial={{scale: 0}} animate={{ scale: 1 }}>
               <Image src="/images/logo.svg" width={100} height={100} />
-            </li>
+            </motion.li>
             <div className="flex flex-row md:flex-col lg:flex-col flex-wrap ml-2 md:ml-0 lg:ml-0 gap-x-5 gap-y-2 lg:gap-x-0 md:gap-x-0 lg:gap-y-0 md:gap-y-0">
-              <li className="w-fit h-fit px-2 py-1 rounded-md text-[#5f5d5d] hover:text-[#fff]">
-                <Link href="/">Home</Link>
-              </li>
-              <li className="w-fit h-fit lg:mt-2 md:mt-2 px-2 py-1 rounded-md text-[#5f5d5d] hover:text-[#fff]">
-                <Link href="/about">Sobre</Link>
-              </li>
-              <li className="w-fit h-fit lg:mt-2 md:mt-2 px-2 py-1 rounded-md text-[#5f5d5d] hover:text-[#fff]">
-                <Link href="/qualification">Formação</Link>
-              </li>
-              <li className="w-fit h-fit lg:mt-2 md:mt-2 px-2 py-1 rounded-md text-[#5f5d5d] hover:text-[#fff]">
-                <Link href="/experience">Experiência</Link>
-              </li>
-              <li className="w-fit h-fit lg:mt-2 md:mt-2 px-2 py-1 rounded-md text-[#5f5d5d] hover:text-[#fff]">
-                <Link href="/projects">Projetos</Link>
-              </li>
-              <li className="w-fit h-fit lg:mt-2 md:mt-2 px-2 py-1 rounded-md text-[#5f5d5d] hover:text-[#fff]">
-                <Link href="/blog">Blog</Link>
-              </li>
+              <motion.li  initial={{scale: 0}} animate={{ scale: 1 }} className='w-fit h-fit px-2 py-1 rounded-md bg-[#262626] hover:text-[#fff] text-[#E5E5E5]'>
+                <Link onClick={() => setActive("home")} href="/">
+                  Home
+                </Link>
+              </motion.li>
+              <motion.li transition={{duration: 0.2}} initial={{scale: 0}} animate={{ scale: 1 }} className='w-fit h-fit px-2 py-1 rounded-md bg-[#262626] hover:text-[#fff] text-[#E5E5E5] mt-2'>
+                <Link onClick={() => setActive("sobre")} href="/">
+                  Sobre
+                </Link>
+              </motion.li>
+              <motion.li transition={{duration: 0.4}} initial={{scale: 0}} animate={{ scale: 1 }} className='w-fit h-fit px-2 py-1 rounded-md bg-[#262626] hover:text-[#fff] text-[#E5E5E5] mt-2'>
+                <Link
+                  onClick={() => setActive("formacao")}
+                  href="/qualification"
+                >
+                  Formação
+                </Link>
+              </motion.li>
+              <motion.li transition={{duration: 0.6}} initial={{scale: 0}} animate={{ scale: 1 }} className='w-fit h-fit px-2 py-1 rounded-md bg-[#262626] hover:text-[#fff] text-[#E5E5E5] mt-2'>
+                <Link
+                  onClick={() => setActive("experiencia")}
+                  href="/experience"
+                >
+                  Experiência
+                </Link>
+              </motion.li>
+              <motion.li transition={{duration: 0.8}} initial={{scale: 0}} animate={{ scale: 1 }} className='w-fit h-fit px-2 py-1 rounded-md bg-[#262626] hover:text-[#fff] text-[#E5E5E5] mt-2'>
+                <Link onClick={() => setActive("projetos")} href="/projects">
+                  Projetos
+                </Link>
+              </motion.li>
+              <motion.li transition={{duration: 1}} initial={{scale: 0}} animate={{ scale: 1 }} className='w-fit h-fit px-2 py-1 rounded-md bg-[#262626] hover:text-[#fff] text-[#E5E5E5] mt-2'>
+                <Link onClick={() => setActive("blog")} href="/blog">
+                  Blog
+                </Link>
+              </motion.li>
             </div>
           </ul>
         </header>
