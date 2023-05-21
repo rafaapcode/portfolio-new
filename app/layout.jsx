@@ -49,7 +49,6 @@ export default function RootLayout({ children }) {
                   key={title}
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
-                  whileHover={{ scale: 1.1 }}
                   whileTap={{ y: -5 }}
                   transition={{ duration: index / 10 }}
                   className={
