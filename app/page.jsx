@@ -94,7 +94,7 @@ export default function Home() {
       </motion.div>
       <motion.div initial={{scaleY: 0 }} animate={{scaleY: 1}} className="md:px-10 lg:px-10 mt-5 mb-5 w-full lg:w-[75%] md:w-[90%] h-16 flex items-center flex-wrap gap-x-2 gap-y-2">
         {techs.map((techName) => (
-          <span key={techName} className="font-semibold px-2 text-sm rounded-md shadow-md bg-slate-300 text-slate-700 shadow-slate-500/50">
+          <span key={techName} className="font-semibold px-2 text-sm rounded-md shadow-lg bg-slate-300 text-slate-700 hover:shadow-slate-500/50 cursor-pointer transition-all ease-out duration-100">
             #{techName}
           </span>
         ))}

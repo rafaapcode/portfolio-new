@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
                 src="/images/logo.svg"
                 width={100}
                 height={100}
-                alt="logo"
+                alt='logo'
               />
             </motion.li>
             <div className="flex flex-row md:flex-col lg:flex-col flex-wrap ml-2 md:ml-0 lg:ml-0 gap-x-5 gap-y-2 lg:gap-x-0 md:gap-x-0 lg:gap-y-0 md:gap-y-0">
