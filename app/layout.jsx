@@ -1,8 +1,8 @@
 "use client";
 
 import "./globals.css";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -12,16 +12,23 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const [active, setActive] = useState("");
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
   const menus = [
-    { title: "Home", path: "/", activeKey: "home" },
-    { title: "Sobre", path: "/sobre", activeKey: "sobre" },
-    { title: "Formação", path: "/qualification", activeKey: "formacao" },
-    { title: "Experiência", path: "/experiencia", activeKey: "experiencia" },
-    { title: "Projetos", path: "/projects", activeKey: "projetos" },
-    { title: "Blog", path: "/blog", activeKey: "blog" },
+    { title: "Home", path: "/" },
+    { title: "Sobre", path: "/sobre" },
+    { title: "Formação", path: "/qualification" },
+    { title: "Experiência", path: "/experiencia" },
+    { title: "Projetos", path: "/projects" },
+    { title: "Blog", path: "/blog" },
   ];
+
+  const style = {
+    notSelected:
+      "w-fit h-fit px-2 py-1 rounded-md mt-2 bg-[#262626] hover:cursor-pointer text-[#E5E5E5] transition ease-in-out duration-500",
+    selected:
+      "w-fit h-fit px-2 py-1 rounded-md mt-2 border-b-2 border-zinc-700 hover:cursor-pointer text-[#E5E5E5] transition ease-in-out duration-500",
+  };
 
   return (
     <html lang="en">
@@ -29,17 +36,29 @@ export default function RootLayout({ children }) {
         <header className="w-full lg:w-[30%] md:w-[30%] h-[30%] lg:h-screen md:h-screen">
           <ul className="lg:mt-5 md:mt-5 lg:float-right md:float-right">
             <motion.li initial={{ scale: 0 }} animate={{ scale: 1 }}>
-              <Image src="/images/logo.svg" width={100} height={100} />
+              <Image
+                src="/images/logo.svg"
+                width={100}
+                height={100}
+                alt="logo"
+              />
             </motion.li>
             <div className="flex flex-row md:flex-col lg:flex-col flex-wrap ml-2 md:ml-0 lg:ml-0 gap-x-5 gap-y-2 lg:gap-x-0 md:gap-x-0 lg:gap-y-0 md:gap-y-0">
-              {menus.map(({ title, activeKey, path }, index) => (
+              {menus.map(({ title, path }, index) => (
                 <motion.li
-                  transition={{ duration: index / 10 }}
+                  key={title}
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
-                  className="w-fit h-fit px-2 py-1 rounded-md mt-2 bg-[#262626] hover:text-[#fff] text-[#E5E5E5]"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ y: -5 }}
+                  transition={{ duration: index / 10 }}
+                  className={
+                    selectedIndex === index
+                      ? style["selected"]
+                      : style["notSelected"]
+                  }
                 >
-                  <Link onClick={() => setActive({ active })} href={path}>
+                  <Link onClick={() => setSelectedIndex(index)} href={path}>
                     {title}
                   </Link>
                 </motion.li>

@@ -51,12 +51,13 @@ export default function Home() {
           src="/images/cacto.jpg"
           width={100}
           height={100}
+          alt="my photo"
         />
         <div className="flex flex-col justify-center items-start lg:items-center md:items-center w-[40%] lg:w-[15%] md:w-[15%]">
           <ul>
             <li className="flex gap-x-2">
               <span>
-                <Image src="/images/linkedin-icon.svg" width={20} height={20} />
+                <Image src="/images/linkedin-icon.svg" width={20} height={20} alt="social icon" />
               </span>
               <a
                 href="https://www.linkedin.com/in/rafael-ap/"
@@ -69,7 +70,7 @@ export default function Home() {
             </li>
             <li className="mt-2 flex gap-x-2">
               <span>
-                <Image src="/images/github-icon.svg" width={20} height={20} />
+                <Image src="/images/github-icon.svg" width={20} height={20} alt="social icon" />
               </span>
               <a
                 href="https://github.com/rafaapcode"
@@ -82,7 +83,7 @@ export default function Home() {
             </li>
             <li className="mt-2 flex gap-x-2">
               <span>
-                <Image src="/images/email-icon.svg" width={20} height={20} />
+                <Image src="/images/email-icon.svg" width={20} height={20} alt="social icon" />
               </span>
               <Link className="text-[#5f5d5d]" href="/contact">
                 Email
@@ -93,7 +94,7 @@ export default function Home() {
       </motion.div>
       <motion.div initial={{scaleY: 0 }} animate={{scaleY: 1}} className="md:px-10 lg:px-10 mt-5 mb-5 w-full lg:w-[75%] md:w-[90%] h-16 flex items-center flex-wrap gap-x-2 gap-y-2">
         {techs.map((techName) => (
-          <span className="font-semibold px-2 text-sm rounded-md shadow-md bg-slate-300 text-slate-700 shadow-slate-500/50">
+          <span key={techName} className="font-semibold px-2 text-sm rounded-md shadow-md bg-slate-300 text-slate-700 shadow-slate-500/50">
             #{techName}
           </span>
         ))}
