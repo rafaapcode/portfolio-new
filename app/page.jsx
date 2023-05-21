@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import Title from "./components/title";
+import Paragraphs from "./components/paragraphs";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -20,27 +22,13 @@ export default function Home() {
 
   return (
     <main className="w-full lg:w-[70%] h-[80%] lg:h-screen md:h-screen px-5 overflow-auto">
-      <div className="w-[95%] mt-5 lg:mt-12 md:mt-12 md:px-10 lg:px-10">
-        <motion.h1
-          initial={{ scaleY: 0 }}
-          animate={{ scaleY: 1 }}
-          className="text-2xl"
-        >
-          Rafael Aparecido
-        </motion.h1>
-      </div>
-      <motion.div
-        initial={{ scaleY: 0 }}
-        animate={{ scaleY: 1 }}
-        className="md:px-10 mt-5 text-[#666565]"
-      >
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde sint
+      <Title title="Rafael Aparecido" />
+      <Paragraphs
+        paragraph="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde sint
           deserunt explicabo obcaecati at! Reiciendis laudantium maiores, cum
           consequatur odio aliquid. Quasi vel dolorem provident placeat
-          distinctio, dolores praesentium modi!
-        </p>
-      </motion.div>
+          distinctio, dolores praesentium modi!"
+      />
       <motion.div
         initial={{ x: -320 }}
         animate={{ x: 0 }}
@@ -57,7 +45,12 @@ export default function Home() {
           <ul>
             <li className="flex gap-x-2">
               <span>
-                <Image src="/images/linkedin-icon.svg" width={20} height={20} alt="social icon" />
+                <Image
+                  src="/images/linkedin-icon.svg"
+                  width={20}
+                  height={20}
+                  alt="social icon"
+                />
               </span>
               <a
                 href="https://www.linkedin.com/in/rafael-ap/"
@@ -70,7 +63,12 @@ export default function Home() {
             </li>
             <li className="mt-2 flex gap-x-2">
               <span>
-                <Image src="/images/github-icon.svg" width={20} height={20} alt="social icon" />
+                <Image
+                  src="/images/github-icon.svg"
+                  width={20}
+                  height={20}
+                  alt="social icon"
+                />
               </span>
               <a
                 href="https://github.com/rafaapcode"
@@ -83,7 +81,12 @@ export default function Home() {
             </li>
             <li className="mt-2 flex gap-x-2">
               <span>
-                <Image src="/images/email-icon.svg" width={20} height={20} alt="social icon" />
+                <Image
+                  src="/images/email-icon.svg"
+                  width={20}
+                  height={20}
+                  alt="social icon"
+                />
               </span>
               <Link className="text-[#5f5d5d]" href="/contact">
                 Email
@@ -92,21 +95,26 @@ export default function Home() {
           </ul>
         </div>
       </motion.div>
-      <motion.div initial={{scaleY: 0 }} animate={{scaleY: 1}} className="md:px-10 lg:px-10 mt-5 mb-5 w-full lg:w-[75%] md:w-[90%] h-16 flex items-center flex-wrap gap-x-2 gap-y-2">
+      <motion.div
+        initial={{ scaleY: 0 }}
+        animate={{ scaleY: 1 }}
+        className="md:px-10 lg:px-10 mt-5 mb-5 w-full lg:w-[75%] md:w-[90%] h-16 flex items-center flex-wrap gap-x-2 gap-y-2"
+      >
         {techs.map((techName) => (
-          <span key={techName} className="font-semibold px-2 text-sm rounded-md shadow-lg bg-slate-300 text-slate-700 hover:shadow-slate-500/50 cursor-pointer transition-all ease-out duration-100">
+          <span
+            key={techName}
+            className="font-semibold px-2 text-sm rounded-md shadow-lg bg-slate-300 text-slate-700 hover:shadow-slate-500/50 cursor-pointer transition-all ease-out duration-100"
+          >
             #{techName}
           </span>
         ))}
       </motion.div>
-      <motion.div initial={{scaleY: 0 }} animate={{scaleY: 1}} className="md:px-10 lg:mt-5 md:mt-5 text-[#666565]">
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde sint
+      <Paragraphs
+        paragraph="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde sint
           deserunt explicabo obcaecati at! Reiciendis laudantium maiores, cum
           consequatur odio aliquid. Quasi vel dolorem provident placeat
-          distinctio, dolores praesentium modi!
-        </p>
-      </motion.div>
+          distinctio, dolores praesentium modi!"
+      />
     </main>
   );
 }
