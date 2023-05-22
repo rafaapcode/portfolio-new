@@ -32,7 +32,7 @@ export default function Home() {
       <motion.div
         initial={{ x: -320 }}
         animate={{ x: 0 }}
-        className="md:px-10 lg:mt-5 md:mt-5 flex flex-col md:flex-row lg:flex-row gap-x-12 mb-5 lg:mb-0 md:mb-0"
+        className="md:px-10 lg:mt-5 md:mt-5 flex gap-x-12 mb-5 lg:mb-0 md:mb-0"
       >
         <Image
           className="rounded-full mt-5 mb-5 lg:mt-0 md:mt-0  lg:mb-0 md:mb-0"
