@@ -35,10 +35,15 @@ export default function Experience() {
       <div className="mt-10 w-full h-[70%] lg:h-[75%] flex justify-center md:justify-start lg:justify-start flex-wrap gap-x-2 gap-y-5 overflow-y-auto">
         {items.map((item) => (
           <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 0.2 }}
             className="flex flex-col justify-evenly shadow-md shadow-[#2b2727] hover:bg-[#2b2727] cursor-pointer w-full lg:w-[35%] md:w-[60%] md:mx-auto lg:mx-0 bg-[#1f1d1d] rounded-md px-2 py-3"
           >
             <div className="w-full flex flex-col lg:flex-row lg:justify-around items-center">
-              <motion.p className="text-base md:text-lg">{item.empresa}</motion.p>
+              <motion.p className="text-base md:text-lg">
+                {item.empresa}
+              </motion.p>
               <motion.p className="text-sm md:text-base text-[#494949]">
                 {item.cargo}
               </motion.p>
