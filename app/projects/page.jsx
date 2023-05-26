@@ -12,16 +12,15 @@ export default function Projects() {
   const items = [
     { id: 1, nome: "Reservas", desc: "teste do teste", techs: ["HTML", "CSS", "JS", "PY", "C", "JAVA"], desc: 'Sistema para reservas em sala de aula. Ele me da o caminho mais rápido que posso fazer as reservas, gastando menos tempo.' },
     { id: 2, nome: "Cadastro", desc: "teste do teste", techs: ["JS", "PY"], desc: 'testando' },
-    { id: 3, nome: "Futebol APP", desc: "teste do teste", techs: ["C", "JAVA"], desc: 'testando' },
   ];
 
   return (
     <section className="w-full lg:w-[70%] h-[80%] lg:h-screen md:h-screen px-5 overflow-auto">
       <Title title="Projetos" />
-      <div className="mt-10 w-full flex gap-x-2 h-[50%] relative">
+      <div className="mt-10 w-full flex flex-col items-center lg:justify-start lg:gap-x-2 lg:items-start lg:flex-row h-[50%] overflow-auto relative">
         {items.map((item) => (
           <motion.div
-            className="mt-10 p-2 bg-[#201f1f] w-[35%] h-[35%] rounded-md cursor-pointer"
+            className="mt-2 p-2 bg-[#201f1f] w-[70%] h-[75%] md:h-[20%] lg:w-[35%] lg:h-[35%] rounded-md cursor-pointer"
             layoutId={item.id}
             onClick={() => {
               setSelectedId(item.id);
@@ -38,7 +37,7 @@ export default function Projects() {
         ))}
         <AnimatePresence>
           {selectedId && (
-            <motion.div className="backdrop-blur flex flex-col left-[20%] rounded w-[60%] h-[60%] absolute bg-[#666565]" layoutId={selectedId}>
+            <motion.div className="flex flex-col left-[0%] md:left-[10%] lg:left-[20%] top-[10%] rounded h-[80%] w-full md:h-[40%] md:w-[80%] lg:w-[60%] lg:h-[60%] absolute bg-[#666565]" layoutId={selectedId}>
               <motion.button
                 className="self-end mr-2 mt-2 text-center transition-all duration-75 hover:bg-[#505050] bg-[#a09f9f] h-[30px] w-[30px] rounded-full"
                 onClick={() => setSelectedId(null)}
