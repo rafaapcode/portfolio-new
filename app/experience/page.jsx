@@ -15,17 +15,17 @@ export default function Experience() {
     },
     {
       id: 2,
-      empresa: "ITP SYSTEMS",
-      cargo: "Estagiário de TI",
-      periodo: "Jan de 2023 - Mar de 2023",
-      desc: "Suporte aos usuários da rede e do SAP ( ERP ), manutenção de computadores e instação de softwares, implementação de monitoramento de redes, implementeação de plataforma de ensino ( MOODLE ).",
+      empresa: "Universidade São Francisco",
+      cargo: "Suporte Técnico",
+      periodo: "Mar de 2023 - Atual",
+      desc: "Manutenção e configuração em equipamentos de TI em geral, utilização de plataformas como GLPI e CITRIX e preparação de equipamentos para as aulas.",
     },
     {
       id: 3,
-      empresa: "ITP SYSTEMS",
-      cargo: "Estagiário de TI",
-      periodo: "Jan de 2023 - Mar de 2023",
-      desc: "Suporte aos usuários da rede e do SAP ( ERP ), manutenção de computadores e instação de softwares, implementação de monitoramento de redes, implementeação de plataforma de ensino ( MOODLE ).",
+      empresa: "Freelancer",
+      cargo: "Desenvolvedor Front-End",
+      periodo: "Mar de 2023 - Atual",
+      desc: "Atuando como desenvolvedor front-end, dando manutenção e adicionando funcionalidade em um sistema de Advocacia. Usando como tecnologia principal ANGULAR. Sendo essa minha prinmeira oportunidade de trabalhar em um projeto real.",
     },
   ];
 
@@ -38,7 +38,7 @@ export default function Experience() {
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.2 }}
-            className="flex flex-col justify-evenly shadow-md shadow-[#2b2727] hover:bg-[#2b2727] cursor-pointer w-full lg:w-[35%] md:w-[60%] md:mx-auto lg:mx-0 bg-[#1f1d1d] rounded-md px-2 py-3"
+            className="flex flex-col justify-evenly h-1/2 shadow-md shadow-[#2b2727] hover:bg-[#2b2727] cursor-pointer w-full lg:w-[40%] md:w-[70%] md:mx-auto lg:mx-0 bg-[#1f1d1d] rounded-md px-2 py-3"
           >
             <div className="w-full flex flex-col lg:flex-row lg:justify-around items-center">
               <motion.p className="text-base md:text-lg">

@@ -12,24 +12,40 @@ export default function Projects() {
   const items = [
     {
       id: 1,
-      nome: "Reservas",
-      desc: "teste do teste",
-      techs: ["HTML", "CSS", "JS", "PY", "C", "JAVA"],
-      desc: "Sistema para reservas em sala de aula. Ele me da o caminho mais rápido que posso fazer as reservas, gastando menos tempo.",
+      nome: "News Portal",
+      techs: ["React", "Express", "Tailwind"],
+      desc: "Mostra as notícias de um idioma especificado, podendo também filtrar as notícias por data e também por autor.",
     },
     {
       id: 2,
-      nome: "Cadastro",
-      desc: "teste do teste",
-      techs: ["JS", "PY"],
-      desc: "testando",
+      nome: "Image Manipulation",
+      techs: ["Express", "EJS", "MULTER", "JIMP", "NODEMAILER"],
+      desc: "O objetivo dessa aplicação é adicionar um moldura em várias fotos, e depois fazer o envio das fotos via email. Esse projeto surgiu a partir de um problema , que identifiquei quando trabalhava em um outro projeto que era relacionado ao meio ambiente e a excursão de escolas.",
+    },
+    {
+      id: 3,
+      nome: "Inventory Control",
+      techs: ["MongoDB", "NODEJS", "Swagger"],
+      desc: "Este projeto de API, foi retirado de um processo seletivo. Tem objetivo de fazer o controle de um estoque em uma loja pequena.",
+    },
+    {
+      id: 4,
+      nome: "Trello Notification",
+      techs: ["TypeScript", "HTML", "CSS"],
+      desc: "A ideia desse projeto surgiu quando eu estava estagiando. Recebíamos os chamados pelo Trello, porém muitas vezes não percebia que tinha chamado pois estava fazendo outras atividades, foi então que percebi que se tivessemos como fazer uma forma do trello nos notificar, não precisariamos ficar observando ele a todo momento.",
+    },
+    {
+      id: 5,
+      nome: "Sistema de Advocacia",
+      techs: ["Angular"],
+      desc: "Sistema para facilitar o direcionamento e origanização dos casos em um advocacia local.",
     },
   ];
 
   return (
     <section className="w-full lg:w-[70%] h-[80%] lg:h-screen md:h-screen px-5 overflow-auto">
       <Title title="Projetos" />
-      <div className="mt-10 w-full flex flex-col items-center lg:justify-start lg:gap-x-2 lg:items-start lg:flex-row h-[50%] overflow-auto relative">
+      <div className="mt-10 w-full flex flex-col items-center flex-wrap lg:justify-start lg:gap-x-2 lg:items-start lg:flex-row h-[50%] overflow-auto relative">
         {items.map((item) => (
           <motion.div
             initial={{ scaleX: 0 }}
@@ -55,7 +71,7 @@ export default function Projects() {
         <AnimatePresence>
           {selectedId && (
             <motion.div
-              className="flex flex-col left-[0%] md:left-[10%] lg:left-[20%] top-[10%] rounded h-[80%] w-full md:h-[40%] md:w-[80%] lg:w-[60%] lg:h-[60%] absolute bg-[#666565]"
+              className="flex flex-col left-[0%] md:left-[10%] lg:left-[20%] top-[10%] rounded h-[90%] w-full  md:w-[80%] lg:w-[60%] absolute bg-[#666565] overflow-auto"
               layoutId={selectedId}
             >
               <motion.button

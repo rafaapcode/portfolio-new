@@ -6,9 +6,7 @@ import { motion } from "framer-motion";
 
 export default function Sobre() {
   const nomePosts = [
-    { id: 1, nome: "O que é ACID ?" },
-    { id: 2, nome: "O que é TRANSACTIONS ?" },
-    { id: 3, nome: "O que é TEOREMA CAP ?" },
+    { id: 1, nome: "Em desenvolvimento" },
   ];
 
   return (
@@ -18,7 +16,7 @@ export default function Sobre() {
         <ul className="ml-10">
           {nomePosts.map(({nome, id}) => (
             <motion.li initial={{opacity: 0}} animate={{opacity: 1}} className="mt-2" key={nome}>
-              <Link href={`/blog/${id}`}>
+              <Link href={`/`}>
                 <span className="text-base font-semibold text-[#fff] hover:text-[#666565] transition-all cursor-pointer p-2 rounded">
                   {nome}
                 </span>

@@ -25,10 +25,7 @@ export default function Home() {
     <main className="w-full lg:w-[70%] h-[80%] lg:h-screen md:h-screen px-5 overflow-auto">
       <Title title="Rafael Aparecido" />
       <Paragraphs
-        paragraph="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde sint
-          deserunt explicabo obcaecati at! Reiciendis laudantium maiores, cum
-          consequatur odio aliquid. Quasi vel dolorem provident placeat
-          distinctio, dolores praesentium modi!"
+        paragraph="Olá, sou o Rafael e atualmente trabalho como Suporte Técnico na USF."
       />
       <motion.div
         initial={{ x: -320 }}
@@ -106,10 +103,7 @@ export default function Home() {
         ))}
       </motion.div>
       <Paragraphs
-        paragraph="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde sint
-          deserunt explicabo obcaecati at! Reiciendis laudantium maiores, cum
-          consequatur odio aliquid. Quasi vel dolorem provident placeat
-          distinctio, dolores praesentium modi!"
+        paragraph="Estou buscando minha primeira oportunidade na área de Desenvolvimento de Software, sou apaixonado por tudo que envolva Back-End. Procuro estar sempre me atualizando das tecnologias e principalmente sobre IA e Blockchain, onde possuo um interesse em aprender."
       />
     </main>
   );
