@@ -42,7 +42,7 @@ export default function Home() {
           height={100}
           alt="my photo"
         />
-        <div className="flex flex-col justify-center items-start lg:items-center md:items-center w-[40%] lg:w-[15%] md:w-[15%]">
+        <div className="flex flex-col justify-center items-start lg:items-center md:items-center w-[40%] lg:w-[15%] md:w-[25%]">
           <ul>
             <li className="flex gap-x-2">
               <span>
