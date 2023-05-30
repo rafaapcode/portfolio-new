@@ -45,13 +45,13 @@ export default function Projects() {
   return (
     <section className="w-full lg:w-[70%] h-[80%] lg:h-screen md:h-screen px-5 overflow-auto">
       <Title title="Projetos" />
-      <div className="mt-10 w-full flex flex-col items-center flex-wrap lg:justify-start lg:gap-x-2 lg:items-start lg:flex-row h-[50%] overflow-auto relative">
+      <div className="mt-10 w-full flex flex-row items-center flex-wrap lg:justify-start lg:gap-x-2 lg:items-start lg:flex-row h-[70%] overflow-y-auto relative">
         {items.map((item) => (
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.2 }}
-            className="mt-2 p-2 bg-[#201f1f] w-[70%] h-[75%] md:h-[20%] lg:w-[35%] lg:h-[35%] rounded-md cursor-pointer"
+            className="mt-2 p-2 bg-[#201f1f] w-full h-[35%] md:h-[20%] md:w-[70%] lg:w-[35%] lg:h-[35%] rounded-md cursor-pointer"
             layoutId={item.id}
             onClick={() => {
               setSelectedId(item.id);
@@ -71,7 +71,7 @@ export default function Projects() {
         <AnimatePresence>
           {selectedId && (
             <motion.div
-              className="flex flex-col left-[0%] md:left-[10%] lg:left-[20%] top-[10%] rounded h-[90%] w-full  md:w-[80%] lg:w-[60%] absolute bg-[#666565] overflow-auto"
+              className="flex flex-col left-[0%] md:left-[10%] lg:left-[20%] top-[70%] md:top-[10%] lg:top-[10%] rounded h-[90%] w-full  md:w-[80%] lg:w-[60%] absolute bg-[#666565] overflow-auto"
               layoutId={selectedId}
             >
               <motion.button
