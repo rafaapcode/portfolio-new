@@ -7,6 +7,13 @@ import { motion } from "framer-motion";
 export default function Experience() {
   const items = [
     {
+      id: 0,
+      empresa: "Projetos Pessoais",
+      cargo: "Desenvolvedor",
+      periodo: "Jan de 2021 - Atual",
+      desc: "Desenvolvo projetos que acredito que irão agregar no meu desenvolvimento profissional e que irá me desafiar a aprender cada vez mais.",
+    },
+    {
       id: 1,
       empresa: "ITP SYSTEMS",
       cargo: "Estagiário de TI",

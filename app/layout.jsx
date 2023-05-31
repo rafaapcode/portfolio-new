@@ -19,6 +19,13 @@ export default function RootLayout({ children }) {
     { title: "Blog", path: "/blog" },
   ];
 
+  const style = {
+    notSelected:
+      "w-fit h-fit px-2 py-1 rounded-md mt-2 bg-[#262626] hover:cursor-pointer text-[#E5E5E5] transition ease-in-out duration-500",
+    selected:
+      "w-fit h-fit px-2 py-1 rounded-md mt-2 border-b-2 border-zinc-700 hover:cursor-pointer text-[#E5E5E5] transition ease-in-out duration-500",
+  };
+
   return (
     <html lang="en">
       <body className="flex flex-col w-screen h-screen lg:flex-row md:flex-row bg-[#111010]">
