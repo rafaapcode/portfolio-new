@@ -5,7 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
-
+import Home from "./page";
+import Sobre from "./about/page";
+import Formacao from "./qualification/page";
+import Experience from "./experience/page";
+import Projects from "./projects/page";
+import Blog  from "./blog/page";
 
 export default function RootLayout({ children }) {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -53,15 +58,21 @@ export default function RootLayout({ children }) {
                       : style["notSelected"]
                   }
                 >
-                  <Link onClick={() => setSelectedIndex(index)} href={path}>
+                  <span onClick={() => setSelectedIndex(index)}>
                     {title}
-                  </Link>
+                  </span>
                 </motion.li>
               ))}
             </div>
           </ul>
         </header>
-        {children}
+        {/* {children} */}
+        {menus[selectedIndex].title === 'Home' && <Home/>}
+        {menus[selectedIndex].title === 'Sobre' && <Sobre/>}
+        {menus[selectedIndex].title === 'Formação' && <Formacao/>}
+        {menus[selectedIndex].title === 'Experiência' && <Experience/>}
+        {menus[selectedIndex].title === 'Projetos' && <Projects/>}
+        {menus[selectedIndex].title === 'Blog' && <Blog/>}
       </body>
     </html>
   );

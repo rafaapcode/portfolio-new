@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function SocialButton({ imgUrl, text }) {
+export default function SocialButton({ imgUrl, text, url }) {
   return (
-    <a href="https://www.linkedin.com/in/rafael-ap/" target="_blank">
+    <a href={url} target="_blank">
       <motion.button
         initial={{ scaleY: 0 }}
         animate={{ scaleY: 1 }}

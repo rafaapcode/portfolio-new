@@ -4,7 +4,7 @@ import Title from "../components/title";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-export default function Sobre() {
+export default function Blog() {
   const nomePosts = [{ id: 1, nome: "Em desenvolvimento" }];
 
   return (

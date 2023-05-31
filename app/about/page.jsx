@@ -32,8 +32,8 @@ export default function Sobre() {
       />
       <Paragraphs paragraph={aboutMe.about} />
       <div className="mt-5 w-1/2 mx-auto flex flex-col justify-center items-center md:flex-row lg:flex-row gap-y-3 md:gap-y-0 lg:gap-y-0 md:gap-x-3 lg: ">
-        <SocialButton imgUrl={'/images/linkedin-icon.svg'} text={'Linkedin'}/>
-        <SocialButton imgUrl={'/images/github-icon.svg'} text={'GitHub'}/>
+        <SocialButton url="https://www.linkedin.com/in/rafael-ap/" imgUrl={'/images/linkedin-icon.svg'} text={'Linkedin'}/>
+        <SocialButton url="https://github.com/rafaapcode" imgUrl={'/images/github-icon.svg'} text={'GitHub'}/>
       </div>
     </section>
   );
