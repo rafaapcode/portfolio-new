@@ -34,7 +34,7 @@ export default function Home() {
       >
         <Image
           className="rounded-full mt-5 mb-5 lg:mt-0 md:mt-0  lg:mb-0 md:mb-0"
-          src="/images/cacto.jpg"
+          src="/images/foto-perfil.jpeg"
           width={100}
           height={100}
           alt="my photo"
