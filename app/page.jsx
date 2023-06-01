@@ -86,9 +86,9 @@ export default function Home() {
                   alt="social icon"
                 />
               </span>
-              <Link className="text-[#5f5d5d]" href="/contact">
+              <a className="text-[#5f5d5d]" href="mailto: rafaap2003@gmail.com">
                 Email
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
