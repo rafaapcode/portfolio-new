@@ -6,10 +6,10 @@ import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Home from "./page";
-import Sobre from "./about/page";
-import Formacao from "./qualification/page";
-import Experience from "./experience/page";
-import Projects from "./projects/page";
+import Sobre from "./components/pages/about";
+import Formacao from "./components/pages/Qualification";
+import Experience from "./components/pages/Experience";
+import Projects from "./components/pages/Projects";
 import Blog  from "./blog/page";
 
 export default function RootLayout({ children }) {

@@ -1,7 +1,7 @@
 "use client";
 
-import Title from "../components/title";
-import Tags from "../components/tag";
+import Title from "../title";
+import Tags from "../tag";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 

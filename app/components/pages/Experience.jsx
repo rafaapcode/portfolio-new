@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Title from "../components/title";
+import Title from "../title";
 import { motion } from "framer-motion";
 
 export default function Experience() {

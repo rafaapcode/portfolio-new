@@ -1,8 +1,8 @@
 "use client";
 
-import Title from "../components/title";
-import Paragraphs from "../components/paragraphs";
-import SocialButton from "../components/social-buttons";
+import Title from "../title";
+import Paragraphs from "../paragraphs";
+import SocialButton from "../social-buttons";
 import { motion } from "framer-motion";
 
 export default function Sobre() {
