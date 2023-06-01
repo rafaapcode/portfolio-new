@@ -1,110 +1,69 @@
 "use client";
 
+import "./globals.css";
 import Image from "next/image";
-import Link from "next/link";
-import Title from "./components/title";
-import Paragraphs from "./components/paragraphs";
-import Tags from "./components/tag";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+import Home from "./components/pages/Home";
+import Sobre from "./components/pages/about";
+import Formacao from "./components/pages/Qualification";
+import Experience from "./components/pages/Experience";
+import Projects from "./components/pages/Projects";
+import Blog from "./blog/page";
 
-export default function Home() {
-  const techs = [
-    "HTML",
-    "CSS",
-    "TypeScript",
-    "NestJS",
-    "Google Cloud",
-    "Python",
-    "Angular",
-    "NextJS",
-    "MongoDB",
-    "MySql",
+export default function Header() {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const menus = [
+    { title: "Home", path: "/" },
+    { title: "Sobre", path: "/about" },
+    { title: "Formação", path: "/qualification" },
+    { title: "Experiência", path: "/experience" },
+    { title: "Projetos", path: "/projects" },
+    { title: "Blog", path: "/blog" },
   ];
+  const router = useRouter();
+  const style = {
+    notSelected:
+      "w-fit h-fit px-2 py-1 rounded-md mt-2 bg-[#262626] hover:cursor-pointer text-[#E5E5E5] transition ease-in-out duration-500",
+    selected:
+      "w-fit h-fit px-2 py-1 rounded-md mt-2 border-b-2 border-zinc-700 hover:cursor-pointer text-[#E5E5E5] transition ease-in-out duration-500",
+  };
 
   return (
-    <main className="w-full lg:w-[70%] h-[80%] lg:h-screen md:h-screen px-5 overflow-auto">
-      <Title title="Rafael Aparecido" />
-      <Paragraphs
-        paragraph="Olá, sou o Rafael e atualmente trabalho como Suporte Técnico na USF."
-      />
-      <motion.div
-        initial={{ x: -320 }}
-        animate={{ x: 0 }}
-        className="md:px-10 lg:mt-5 md:mt-5 flex gap-x-12 mb-5 lg:mb-0 md:mb-0"
-      >
-        <Image
-          className="rounded-full mt-5 mb-5 lg:mt-0 md:mt-0  lg:mb-0 md:mb-0"
-          src="/images/foto-perfil.jpeg"
-          width={100}
-          height={100}
-          alt="my photo"
-        />
-        <div className="flex flex-col justify-center items-start lg:items-center md:items-center w-[40%] lg:w-[15%] md:w-[25%]">
-          <ul>
-            <li className="flex gap-x-2">
-              <span>
-                <Image
-                  src="/images/linkedin-icon.svg"
-                  width={20}
-                  height={20}
-                  alt="social icon"
-                />
-              </span>
-              <a
-                href="https://www.linkedin.com/in/rafael-ap/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#5f5d5d]"
+    <body className="flex flex-col w-screen h-screen lg:flex-row md:flex-row bg-[#111010]">
+      <header className="w-full lg:w-[30%] md:w-[30%] h-[30%] lg:h-screen md:h-screen">
+        <ul className="lg:mt-5 md:mt-5 lg:float-right md:float-right">
+          <motion.li initial={{ scale: 0 }} animate={{ scale: 1 }}>
+            <Image src="/images/logo.svg" width={100} height={100} alt="logo" />
+          </motion.li>
+          <div className="flex flex-row md:flex-col lg:flex-col flex-wrap ml-2 md:ml-0 lg:ml-0 gap-x-5 gap-y-2 lg:gap-x-0 md:gap-x-0 lg:gap-y-0 md:gap-y-0">
+            {menus.map(({ title, path }, index) => (
+              <motion.li
+                key={title}
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                whileTap={{ y: -5 }}
+                transition={{ duration: index / 10 }}
+                className={
+                  selectedIndex === index
+                    ? style["selected"]
+                    : style["notSelected"]
+                }
               >
-                Linkedin
-              </a>
-            </li>
-            <li className="mt-2 flex gap-x-2">
-              <span>
-                <Image
-                  src="/images/github-icon.svg"
-                  width={20}
-                  height={20}
-                  alt="social icon"
-                />
-              </span>
-              <a
-                href="https://github.com/rafaapcode"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#5f5d5d]"
-              >
-                GitHub
-              </a>
-            </li>
-            <li className="mt-2 flex gap-x-2">
-              <span>
-                <Image
-                  src="/images/email-icon.svg"
-                  width={20}
-                  height={20}
-                  alt="social icon"
-                />
-              </span>
-              <a className="text-[#5f5d5d]" href="mailto: rafaap2003@gmail.com">
-                Email
-              </a>
-            </li>
-          </ul>
-        </div>
-      </motion.div>
-      <motion.div
-        initial={{ scaleY: 0 }}
-        animate={{ scaleY: 1 }}
-        className="md:px-10 lg:px-10 mt-5 mb-5 w-full lg:w-[75%] md:w-[90%] h-16 flex items-center flex-wrap gap-x-2 gap-y-2"
-      >
-        {techs.map((techName) => (
-         <Tags key={techName} techname={techName} />
-        ))}
-      </motion.div>
-      <Paragraphs
-        paragraph="Estou buscando minha primeira oportunidade na área de Desenvolvimento de Software, sou apaixonado por tudo que envolva Back-End. Procuro estar sempre me atualizando das tecnologias e principalmente sobre IA e Blockchain, onde possuo um interesse em aprender."
-      />
-    </main>
+                <span onClick={() => setSelectedIndex(index)}>{title}</span>
+              </motion.li>
+            ))}
+          </div>
+        </ul>
+      </header>
+      {menus[selectedIndex].title === "Home" && <Home />}
+      {menus[selectedIndex].title === "Sobre" && <Sobre />}
+      {menus[selectedIndex].title === "Formação" && <Formacao />}
+      {menus[selectedIndex].title === "Experiência" && <Experience />}
+      {menus[selectedIndex].title === "Projetos" && <Projects />}
+      {menus[selectedIndex].title === "Blog" && router.push('/blog')}
+    </body>
   );
 }

@@ -18,7 +18,7 @@ export default function Posts({ params }) {
         whileHover={{ scale: 1.05 }}
         className="w-fit h-fit cursor-pointer"
       >
-        <Link href="/">
+        <Link href="/blog">
           <Image
             src="/images/arrow.png"
             width={50}
@@ -28,7 +28,7 @@ export default function Posts({ params }) {
         </Link>
       </motion.div>
       <div
-        className="mt-5 w-full px-5 text-lg flex flex-col items-center h-[85%] overflow-auto gap-y-2"
+        className="mt-5 text-white w-full px-5 text-lg flex flex-col items-center h-[85%] overflow-auto gap-y-2"
         dangerouslySetInnerHTML={{ __html: post.desc }}
       >
       </div>
