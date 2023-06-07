@@ -6,7 +6,6 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import Home from "./components/pages/Home";
-import Sobre from "./components/pages/about";
 import Formacao from "./components/pages/Qualification";
 import Experience from "./components/pages/Experience";
 import Projects from "./components/pages/Projects";
@@ -17,7 +16,6 @@ export default function Header() {
 
   const menus = [
     { title: "Home", path: "/" },
-    { title: "Sobre", path: "/about" },
     { title: "Formação", path: "/qualification" },
     { title: "Experiência", path: "/experience" },
     { title: "Projetos", path: "/projects" },
@@ -33,7 +31,7 @@ export default function Header() {
 
   return (
     <body className="flex flex-col w-screen h-screen lg:flex-row md:flex-row bg-[#111010]">
-      <header className="w-full lg:w-[30%] md:w-[30%] h-[30%] lg:h-screen md:h-screen">
+      <header className="w-full lg:w-[20%] md:w-[20%] h-[30%] lg:h-screen md:h-screen">
         <ul className="lg:mt-5 md:mt-5 lg:float-right md:float-right">
           <motion.li initial={{ scale: 0 }} animate={{ scale: 1 }}>
             <Image src="/images/logo.svg" width={100} height={100} alt="logo" />
@@ -59,7 +57,6 @@ export default function Header() {
         </ul>
       </header>
       {menus[selectedIndex].title === "Home" && <Home />}
-      {menus[selectedIndex].title === "Sobre" && <Sobre />}
       {menus[selectedIndex].title === "Formação" && <Formacao />}
       {menus[selectedIndex].title === "Experiência" && <Experience />}
       {menus[selectedIndex].title === "Projetos" && <Projects />}

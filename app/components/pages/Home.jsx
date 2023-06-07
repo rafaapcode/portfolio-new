@@ -23,22 +23,15 @@ export default function Home() {
 
   return (
     <main className="w-full lg:w-[70%] h-[80%] lg:h-screen md:h-screen px-5 overflow-auto">
-      <Title title="Rafael Aparecido" />
+      <Title title="Rafael Aparecido - Desenvolvedor Back-End" />
       <Paragraphs
         paragraph="Olá, sou o Rafael e atualmente trabalho como Suporte Técnico na USF."
       />
       <motion.div
-        initial={{ x: -320 }}
-        animate={{ x: 0 }}
+        initial={{ scaleY: 0 }}
+        animate={{ scaleY: 1 }}
         className="md:px-10 lg:mt-5 md:mt-5 flex gap-x-12 mb-5 lg:mb-0 md:mb-0"
       >
-        <Image
-          className="rounded-full mt-5 mb-5 lg:mt-0 md:mt-0  lg:mb-0 md:mb-0"
-          src="/images/foto-perfil.jpeg"
-          width={100}
-          height={100}
-          alt="my photo"
-        />
         <div className="flex flex-col justify-center items-start lg:items-center md:items-center w-[40%] lg:w-[15%] md:w-[25%]">
           <ul>
             <li className="flex gap-x-2">
@@ -54,7 +47,7 @@ export default function Home() {
                 href="https://www.linkedin.com/in/rafael-ap/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#5f5d5d]"
+                className="text-[#5f5d5d] hover:text-[#7c7a7a]"
               >
                 Linkedin
               </a>
@@ -72,7 +65,7 @@ export default function Home() {
                 href="https://github.com/rafaapcode"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#5f5d5d]"
+                className="text-[#5f5d5d] hover:text-[#7c7a7a]"
               >
                 GitHub
               </a>
@@ -86,7 +79,7 @@ export default function Home() {
                   alt="social icon"
                 />
               </span>
-              <a className="text-[#5f5d5d]" href="mailto: rafaap2003@gmail.com">
+              <a className="text-[#5f5d5d] hover:text-[#7c7a7a]" href="mailto: rafaap2003@gmail.com">
                 Email
               </a>
             </li>
@@ -96,14 +89,14 @@ export default function Home() {
       <motion.div
         initial={{ scaleY: 0 }}
         animate={{ scaleY: 1 }}
-        className="md:px-10 lg:px-10 mt-5 mb-5 w-full lg:w-[75%] md:w-[90%] h-16 flex items-center flex-wrap gap-x-2 gap-y-2"
+        className="md:px-10 lg:px-10 mt-7 mb-10 w-full lg:w-[75%] md:w-[90%] h-16 flex items-center flex-wrap gap-x-2 gap-y-2"
       >
         {techs.map((techName) => (
          <Tags key={techName} techname={techName} />
         ))}
       </motion.div>
       <Paragraphs
-        paragraph="Estou buscando minha primeira oportunidade na área de Desenvolvimento de Software, sou apaixonado por tudo que envolva Back-End. Procuro estar sempre me atualizando das tecnologias e principalmente sobre IA e Blockchain, onde possuo um interesse em aprender."
+        paragraph="Estou buscando minha primeira oportunidade na área de Desenvolvimento de Software, sou apaixonado por tudo que envolva Back-End. Procuro estar sempre me atualizando e principalmente quando o assunto é sobre IA e Blockchain, que são as tecnologias que pretendo me especializar em um futuro próximo."
       />
     </main>
   );

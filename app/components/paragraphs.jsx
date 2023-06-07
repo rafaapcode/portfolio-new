@@ -7,7 +7,7 @@ export default function Paragraphs({ paragraph }) {
     <motion.div
       initial={{ scaleY: 0 }}
       animate={{ scaleY: 1 }}
-      className="md:px-10 lg:mt-5 md:mt-5 text-[#666565]"
+      className="md:px-10 mt-5 mb-5 text-[#666565]"
     >
       <p>
         {paragraph}

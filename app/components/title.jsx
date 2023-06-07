@@ -8,7 +8,7 @@ export default function Title({title}) {
       <motion.h2
         initial={{ scaleY: 0 }}
         animate={{ scaleY: 1 }}
-        className="text-2xl"
+        className="text-xl lg:text-2xl md:text-2xl text-white"
       >
         {title.toUpperCase()}
       </motion.h2>
