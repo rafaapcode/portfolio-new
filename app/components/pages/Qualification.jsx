@@ -35,7 +35,7 @@ export default function Formacao() {
   return (
     <section className="w-full lg:w-[70%] h-[80%] lg:h-screen md:h-screen px-5">
       <Title title="Formação" />
-      <div className="mt-10 w-full h-[63%] lg:h-fit md:h-fit flex  flex-wrap gap-y-3 gap-x-3 overflow-auto">
+      <div className="p-5 mt-10 w-full h-[63%] lg:h-fit md:h-fit flex  flex-wrap gap-y-3 gap-x-3 overflow-auto">
         {qualification.map(({ curso, instituicao, duracao }, index) => (
           <CardQualification
             curso={curso}
