@@ -15,3 +15,16 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
+div::-webkit-scrollbar {
+  width: 6px;               /* width of the entire scrollbar */
+}
+
+div::-webkit-scrollbar-track {
+  background: gray;        /* color of the tracking area */
+}
+
+div::-webkit-scrollbar-thumb {
+  background: rgb(90, 89, 89);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+}
