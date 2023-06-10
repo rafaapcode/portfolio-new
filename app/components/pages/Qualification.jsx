@@ -1,7 +1,7 @@
 "use client";
 
-import Title from "../title";
-import CardQualification from "../card-qualification";
+import Title from "../utils/title";
+import CardQualification from "../utils/card-qualification";
 
 export default function Formacao() {
   const qualification = [

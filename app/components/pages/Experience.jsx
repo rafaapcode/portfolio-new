@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import Title from "../title";
-import CardExperience from "../card-experience";
+import Title from "../utils/title";
+import CardExperience from "../utils/card-experience";
 
 export default function Experience() {
   const items = [

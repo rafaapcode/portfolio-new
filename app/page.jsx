@@ -9,7 +9,7 @@ import Home from "./components/pages/Home";
 import Formacao from "./components/pages/Qualification";
 import Experience from "./components/pages/Experience";
 import Projects from "./components/pages/Projects";
-import Blog from "./blog/page";
+import Blog from "./components/pages/Blog";
 
 export default function Header() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -60,7 +60,7 @@ export default function Header() {
       {menus[selectedIndex].title === "Formação" && <Formacao />}
       {menus[selectedIndex].title === "Experiência" && <Experience />}
       {menus[selectedIndex].title === "Projetos" && <Projects />}
-      {menus[selectedIndex].title === "Blog" && router.push('/blog')}
+      {menus[selectedIndex].title === "Blog" && <Blog/>}
     </body>
   );
 }
