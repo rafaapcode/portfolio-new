@@ -89,13 +89,6 @@ export default function Projects() {
               >
                 X
               </motion.button>
-              <div className="mx-auto w-[200px] h-[200px]">
-                <img
-                  className="rounded-lg mt-5 mb-5"
-                  src="https://www.alura.com.br/artigos/assets/testes/imagem-2.jpg"
-                  alt="teste"
-                />
-              </div>
               <motion.p className="px-5 py-2 font-bold text-sm md:text-base text-[#fff]">
                 {selectedItem.desc}
               </motion.p>

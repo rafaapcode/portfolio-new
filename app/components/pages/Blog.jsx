@@ -10,12 +10,7 @@ export default function Blog() {
       id: 1,
       nome: "Em desenvolvimento",
       tags: ["Back-End", "Full-Stack", "Front-End"],
-    },
-    {
-      id: 2,
-      nome: "Em desenvolvimento",
-      tags: ["Back-End", "Full-Stack", "Front-End"],
-    },
+    }
   ];
 
   return (

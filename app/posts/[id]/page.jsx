@@ -1,11 +1,10 @@
 import Tags from "@/app/components/utils/tag";
-import Link from "next/link";
 
 export default function Posts({ params }) {
   const post = {
-    titulo: "Titulo 1",
-    tags: ["Back-End", "Python", "AI"],
-    content: "<h1>testando</h1>",
+    titulo: "Blog em desenvolvimento",
+    tags: ["Desenvolvendo", "Em Desenvolvimento"],
+    content: "<p>Esta será lançada em breve</p>",
   };
 
   return (
@@ -18,9 +17,10 @@ export default function Posts({ params }) {
           ))}
         </div>
       </div>
-      <div className="text-white mx-auto w-[95%] h-[77%] overflow-auto">
-        <h1>Todo o content</h1>
-      </div>
+      <div
+        className="text-white mx-auto w-[95%] h-[77%] overflow-auto"
+        dangerouslySetInnerHTML={{ __html: post.content }}
+      ></div>
     </div>
   );
 }

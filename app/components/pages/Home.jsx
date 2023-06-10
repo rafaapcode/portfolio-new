@@ -78,7 +78,7 @@ export default function Home() {
                   alt="social icon"
                 />
               </span>
-              <a className="text-[#5f5d5d] hover:text-[#7c7a7a]" href="mailto: rafaap2003@gmail.com">
+              <a className="text-[#5f5d5d] hover:text-[#7c7a7a]" href="/contact">
                 Email
               </a>
             </li>
