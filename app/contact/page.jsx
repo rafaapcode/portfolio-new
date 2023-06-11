@@ -21,7 +21,7 @@ export default function Contact() {
 
   return (
     <div className="w-full h-screen flex flex-col justify-center items-center text-white bg-[#111010]">
-      <form
+      {/* <form
         className="w-[95%] md:w-[80%] lg:w-[40%] h-[65%] flex flex-col justify-center items-center gap-y-5 p-5 border backdrop-blur-md rounded-lg border-[#1d1b1b] shadow-lg"
         onSubmit={handleSubmit}
       >
@@ -52,8 +52,8 @@ export default function Contact() {
           />
         </div>
         <button className="cursor-pointer bg-[#2c2929] hover:bg-[#3b3737] rounded-md px-3 py-1" type="submit">Enviar</button>
-      </form>
-      <button onClick={() => router.push("/")} className="cursor-pointer text-white mt-10 rounded-md py-1 px-3 hover:bg-[#3b3737]">Voltar</button>
+      </form> */}
+      <button onClick={() => router.push("/")} className="cursor-pointer text-white mt-10 rounded-md py-1 px-3 hover:bg-[#3b3737]">Em desenvolvimento</button>
     </div>
   );
 }
