@@ -9,7 +9,6 @@ import Home from "./components/pages/Home";
 import Formacao from "./components/pages/Qualification";
 import Experience from "./components/pages/Experience";
 import Projects from "./components/pages/Projects";
-import Blog from "./components/pages/Blog";
 
 export default function Header() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -19,7 +18,6 @@ export default function Header() {
     { title: "Formação", path: "/qualification" },
     { title: "Experiência", path: "/experience" },
     { title: "Projetos", path: "/projects" },
-    { title: "Blog", path: "/blog" },
   ];
   const router = useRouter();
   const style = {
@@ -53,6 +51,15 @@ export default function Header() {
                 <span onClick={() => setSelectedIndex(index)}>{title}</span>
               </motion.li>
             ))}
+            <motion.li
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              whileTap={{ y: -5 }}
+              transition={{ duration: 0.4 }}
+              className="w-fit h-fit px-2 py-1 rounded-md mt-2 bg-[#262626] hover:cursor-pointer text-[#E5E5E5] transition ease-in-out duration-500"
+            >
+              <a href="/blog">Blog</a>
+            </motion.li>
           </div>
         </ul>
       </header>
@@ -60,7 +67,6 @@ export default function Header() {
       {menus[selectedIndex].title === "Formação" && <Formacao />}
       {menus[selectedIndex].title === "Experiência" && <Experience />}
       {menus[selectedIndex].title === "Projetos" && <Projects />}
-      {menus[selectedIndex].title === "Blog" && <Blog/>}
     </body>
   );
 }
