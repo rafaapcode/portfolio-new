@@ -42,7 +42,7 @@ export default function Projects() {
       id: 5,
       nome: "Sistema de Advocacia",
       techs: ["Angular"],
-      desc: "Sistema para facilitar o direcionamento e origanização dos casos em um advocacia local.",
+      desc: "Sistema para facilitar o direcionamento e organização dos casos em uma advocacia local.",
       url: ''
     },
   ];

@@ -58,7 +58,8 @@ export default function Header() {
               transition={{ duration: 0.4 }}
               className="w-fit h-fit px-2 py-1 rounded-md mt-2 hover:cursor-pointer hover:text-[#838383]  text-[#E5E5E5] transition ease-in-out duration-500"
             >
-              <a href="https://rafaapcode-blog.vercel.app/" target="_blank">Blog</a>
+              {/* https://rafaapcode-blog.vercel.app/  target=_blank*/}
+              <a href="/">Blog</a>
             </motion.li>
           </div>
         </ul>
