@@ -59,7 +59,7 @@ export default function Header() {
               className="w-fit h-fit px-2 py-1 rounded-md mt-2 hover:cursor-pointer hover:text-[#838383]  text-[#E5E5E5] transition ease-in-out duration-500"
             >
               {/* https://rafaapcode-blog.vercel.app/  target=_blank*/}
-              <a href="/">Blog</a>
+              <a href="https://medium.com/@RafaApGs" target="_blank">Blog</a>
             </motion.li>
           </div>
         </ul>
